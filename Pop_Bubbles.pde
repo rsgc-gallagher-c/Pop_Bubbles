@@ -10,11 +10,11 @@ void setup() {
   size(500, 500);
 
   //The starting position of the bubbles 
-  y = 540;
+  y = 530;
   //The starting position of the bubbles 
   y2 = 560;
   //The starting position of the bubbles 
-  y3 = 530;
+  y3 = 580;
 }
 
 void draw() {
@@ -29,12 +29,11 @@ void draw() {
   fill(255);
 
   //Make the bubbles move up 
-  y2 = y2 -2;
-  //Make the bubbles move up 
-  y3 = y3 -2;
-
-  //Make the bubbles move up 
   y = y -2;
+  //Make the bubbles move up 
+  y2 = y2 -2.2;
+  //Make the bubbles move up 
+  y3 = y3 -2.5;
 
   //make the bubbles 
   ellipse(250, y, 25, 25);  
