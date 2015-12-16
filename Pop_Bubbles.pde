@@ -21,21 +21,21 @@ void setup() {
   //The starting position of the bubbles 
   y2 = 560;
   //The starting position of the bubbles 
-  y3 = 580;
+  y3 = 600;
   //The starting position of the bubbles 
-  y4 = 580;
+  y4 = 525;
   //The starting position of the bubbles 
-  y5 = 580;
+  y5 = 530;
   //The starting position of the bubbles 
-  y6 = 580;
+  y6 = 605;
   //The starting position of the bubbles 
-  y7 = 580;
+  y7 = 525;
   //The starting position of the bubbles 
-  y8 = 580;
+  y8 = 570;
   //The starting position of the bubbles 
-  y9 = 580;
+  y9 = 530;
   //The starting position of the bubbles 
-  y10 = 580;
+  y10 = 555;
 }
 
 void draw() {
@@ -45,59 +45,58 @@ void draw() {
 
   //Make no outline of the circle 
   noStroke();
-  
+
   //Make the bubbles move up 
   y = y -2;
   //Make the bubbles move up 
-  y2 = y2 -2.2;
-  //Make the bubbles move up 
+  y2 = y2 -2;
+  //Make the bubbles move up RED
   y3 = y3 -2.5;
   //Make the bubbles move up   //CHANGE SPEEDS 
-  y4 = y4 -2;
+  y4 = y4 -2.2;
+  //Make the bubbles move up RED
+  y5 = y5 -2.4;
   //Make the bubbles move up 
-  y5 = y5 -2;
+  y6 = y6 -2.5;
   //Make the bubbles move up 
-  y6 = y6 -2;
-  //Make the bubbles move up 
-  y7 = y7 -2;
-  //Make the bubbles move up 
-  y8 = y8 -2;
-  //Make the bubbles move up 
-  y9 = y9 -2;
+  y7 = y7 -2.4;
+  //Make the bubbles move up RED
+  y8 = y8 -2.3;
+  //Make the bubbles move up RED
+  y9 = y9 -2.1;
   //Make the bubbles move up //CHANGE SPEEDS
-  y10 = y10 -2;
+  y10 = y10 -2.1;
 
 
   //make the bubbles **ALL NON RED ONES** 
   //Make the bubbles white 
   fill(255);
-  
-  ellipse(250, y, 25, 25);  
+
+  ellipse(200, y, 25, 25);  
   //make the bubbles 
-  ellipse(250, y2, 25, 25); 
+  ellipse(300, y2, 25, 25); 
   //make the bubbles 
-  ellipse(250, y4, 25, 25);
+  ellipse(150, y4, 25, 25);
   //make the bubbles 
-  ellipse(250, y6, 25, 25);
+  ellipse(125, y6, 25, 25);
   //make the bubbles 
-  ellipse(250, y7, 25, 25);
+  ellipse(450, y7, 25, 25);
   //make the bubbles 
-  ellipse(250, y10, 25, 25);
+  ellipse(375, y10, 25, 25);
 
   //Make the third bubble a drffrent colour **ALL RED ONES**
   fill(240, 145, 145);
-  
-  //make the bubbles 
-  ellipse(250, y3, 25, 25); 
-  //make the bubbles 
-  ellipse(250, y5, 25, 25);
-  //make the bubbles 
-  ellipse(250, y8, 25, 25);
-  //make the bubbles 
-  ellipse(250, y9, 25, 25);
 
+  //make the bubbles 
+  ellipse(270, y3, 25, 25); 
+  //make the bubbles 
+  ellipse(215, y5, 25, 25);
+  //make the bubbles 
+  ellipse(100, y8, 25, 25);
+  //make the bubbles 
+  ellipse(400, y9, 25, 25);
 
-
+  //Reset the bubbles back to the bottom of the screen
   if (y == 300) {
     y = 550;
   }
@@ -106,7 +105,28 @@ void draw() {
     y2 = 525;
   }
 
-  if (y3 == 20) {
+  if (y3 == 5) {
     y3 = 525;
+  }
+  if (y4 == 5) {
+    y4 = 525;
+  }
+  if (y5 == 5) {
+    y5 = 525;
+  }
+  if (y6 == 5) {
+    y6 = 525;
+  }
+  if (y7 == 5) {
+    y7 = 525;
+  }
+  if (y8 == 5) {
+    y8 = 525;
+  }
+  if (y9 == 5) {
+    y9 = 525;
+  }
+  if (y10 == 5) {
+    y10 = 525;
   }
 }
