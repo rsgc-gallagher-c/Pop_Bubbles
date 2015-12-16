@@ -98,13 +98,11 @@ void draw() {
 
   //Reset the bubbles back to the bottom of the screen
   if (y == 300) {
-    y = 550;
+    y = 525;
   }
-
   if (y2 == 10) {
     y2 = 525;
   }
-
   if (y3 == 5) {
     y3 = 525;
   }
