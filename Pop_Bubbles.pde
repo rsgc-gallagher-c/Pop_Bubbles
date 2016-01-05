@@ -47,6 +47,7 @@ void setup() {
   y9 = 530;
   //The starting position of the bubbles 
   y10 = 555;
+    score = 0;
 }
 
 void draw() {
@@ -56,7 +57,7 @@ void draw() {
 
   //Score ounter
 
-  score = 0;
+
   textSize(20);
   text("Score: "+ score, 10, 30);
 
