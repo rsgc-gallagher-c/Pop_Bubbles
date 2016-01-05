@@ -47,7 +47,7 @@ void setup() {
   y9 = 530;
   //The starting position of the bubbles 
   y10 = 555;
-    score = 0;
+  score = 0;
 }
 
 void draw() {
@@ -55,7 +55,15 @@ void draw() {
   //Make the background black 
   background(0); 
 
-  //Score ounter
+  //End Game 
+  if (score < -11) {
+  
+    textSize (50);
+    text ("End Game",10,100);
+    
+  noLoop() ;}
+    
+    
 
 
   textSize(20);
@@ -69,17 +77,17 @@ void draw() {
   //Make the bubbles move up 
   y2 = y2 -2;
   //Make the bubbles move up RED
-  y3 = y3 -2.5;
+  y3 = y3 -1;
   //Make the bubbles move up   
   y4 = y4 -2.2;
   //Make the bubbles move up RED
-  y5 = y5 -2.4;
+  y5 = y5 -1.5;
   //Make the bubbles move up 
   y6 = y6 -2.5;
   //Make the bubbles move up 
   y7 = y7 -2.4;
   //Make the bubbles move up RED
-  y8 = y8 -2.3;
+  y8 = y8 -2;
   //Make the bubbles move up RED
   y9 = y9 -2.1;
   //Make the bubbles move up 
@@ -123,12 +131,14 @@ void draw() {
   }
   if (y3 < 5) {
     y3 = 525;
+    score=score-1;
   }
   if (y4 < 5) {
     y4 = 525;
   }
   if (y5 < 5) {
     y5 = 525;
+    score=score-1;
   }
   if (y6 < 5) {
     y6 = 525;
@@ -138,9 +148,11 @@ void draw() {
   }
   if (y8 < 5) {
     y8 = 525;
+    score=score-1;
   }
   if (y9 < 5) {
     y9 = 525;
+    score=score-1;
   }
   if (y10 < 5) {
     y10 = 525;
@@ -150,18 +162,22 @@ void mouseClicked () {
   if (mouseY > y3 - 15 && mouseY < y3 + 15 && mouseX > 270 - 15 && mouseX < 270 + 15) {
     score=score+1;
     fill(255); 
-    text("hit",100,100);
+
+    y3 = 525;
   }
   if (mouseY > y5 - 15 && mouseY < y5 + 15 && mouseX > 215 - 15 && mouseX < 215 + 15) {
-     score=score+1;
-      text("hit",100,100);
+    score=score+1;
+
+    y5 = 525;
   }
   if (mouseY > y8 - 15 && mouseY < y8 + 15 && mouseX > 100 - 15 && mouseX < 100 + 15) {
-     score=score+1;
-      text("hit",100,100);
+    score=score+1;
+
+    y8 = 525;
   }
   if (mouseY > y9 - 15 && mouseY < y9 + 15 && mouseX > 400 - 15 && mouseX < 400 + 15) {
-     score=score+1;
-      text("hit",100,100);
+    score=score+1;
+
+    y9 = 525;
   }
 }
