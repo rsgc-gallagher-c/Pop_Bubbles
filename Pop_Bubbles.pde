@@ -52,7 +52,7 @@ void draw() {
   y2 = y2 -2;
   //Make the bubbles move up RED
   y3 = y3 -2.5;
-  //Make the bubbles move up   //CHANGE SPEEDS 
+  //Make the bubbles move up   
   y4 = y4 -2.2;
   //Make the bubbles move up RED
   y5 = y5 -2.4;
@@ -64,7 +64,7 @@ void draw() {
   y8 = y8 -2.3;
   //Make the bubbles move up RED
   y9 = y9 -2.1;
-  //Make the bubbles move up //CHANGE SPEEDS
+  //Make the bubbles move up 
   y10 = y10 -2.1;
 
 
