@@ -139,7 +139,7 @@ void draw() {
   ellipse(400, y9, 30, 30);
 
   //Reset the bubbles back to the bottom of the screen
-  if (y < 300) {
+  if (y < 7) {
     y = 525;
   }
   if (y2 < 10) {
