@@ -64,14 +64,15 @@ void draw() {
 
     textSize (50);
     text ("End Game", 10, 100);
+    noLoop();
   }
 
-////End game if score is +12
-if (score > +11) {
+  ////End game if score is +12
+  if (score > +11) {
 
-   textSize (50);
-   text ("You Won", 10, 100);
-   noLoop() ;
+    textSize (50);
+    text ("You Won", 10, 100);
+    noLoop() ;
   }
 
 
@@ -235,7 +236,7 @@ void keyPressed() {
   if (key == 's') {
     loop();
   }
-//Press R to restart game 
+  //Press R to restart game 
   if (key == 'r') {
     loop();
     setup();
