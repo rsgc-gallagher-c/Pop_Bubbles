@@ -4,8 +4,8 @@
 
 int score; // score
 int mouseClicked; //for seeing if the bubbles are cliked 
-int time; //Time left to play 
-int m; //time left counter 
+//int time; //Time left to play 
+//int m; //time left counter 
 
 
 //The bubbles 
@@ -29,9 +29,9 @@ void setup() {
   //Score counter 
   score = 0;
 
-  //time counter 
-  time = 120;
-  m = 0;
+  ////time counter 
+  //time = 120;
+  //m = 0;
 
   //The starting position of the bubbles 
   y = 530;
@@ -63,12 +63,12 @@ void draw() {
   //Make the background black 
   background(0); 
 
-  //time counter
-  m = m+1;
+  ////time counter
+  //m = m+1;
 
-  time = time- m/60; 
-  textSize(20);
-  text("Time Left: "+time, 10, 50); //add end game here when time runs up *********
+  //time = time- m/60; 
+  //textSize(20);
+  //text("Time Left: "+time, 10, 50); //add end game here when time runs up *********
 
   //End Game 
   if (score < -11) {
@@ -239,13 +239,15 @@ void mouseClicked () {
   }
 }
 
+//Press S to start game 
 void keyPressed() { 
   if (key == 's') {
     loop();
   }
-    if (key == 'r') {
+//Press R to restart game 
+  if (key == 'r') {
     loop();
     setup();
-      loop();
+    loop();
   }
 }
