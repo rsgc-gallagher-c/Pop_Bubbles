@@ -7,6 +7,7 @@ int mouseClicked; //for seeing if the bubbles are cliked
 int time; //Time left to play 
 int m; //time left counter 
 
+
 //The bubbles 
 float y; //the Y positon on the bubbles 
 float y2; //the Y positon on the bubbles 
@@ -29,7 +30,7 @@ void setup() {
   score = 0;
 
   //time counter 
-  time = 90;
+  time = 120;
   m = 0;
 
   //The starting position of the bubbles 
@@ -54,6 +55,7 @@ void setup() {
   y10 = 555;
   score = 0;
   frameRate(60);
+  noLoop();
 }
 
 void draw() {
@@ -86,7 +88,7 @@ void draw() {
   //Make no outline of the circle 
   noStroke();
 
-  
+
 
 
   //make the bubbles **ALL NON RED ONES** 
@@ -105,7 +107,7 @@ void draw() {
   //make the bubbles 
   ellipse(375, y10, 30, 30);
 
-//Make the bubbles move up 
+  //Make the bubbles move up 
   y = y -2;
   //Make the bubbles move up 
   y2 = y2 -2;
@@ -146,15 +148,15 @@ void draw() {
     y2 = 525;
   }
   if (y3 < 5) {
-   y3 = 525;
-   score=score-1;
+    y3 = 525;
+    score=score-1;
   }
   if (y4 < 5) {
     y4 = 525;
   }
   if (y5 < 5) {
-   y5 = 525;
-   score=score-1;
+    y5 = 525;
+    score=score-1;
   }
   if (y6 < 5) {
     y6 = 525;
@@ -163,12 +165,12 @@ void draw() {
     y7 = 525;
   }
   if (y8 < 5) {
-   y8 = 525;
-   score=score-1;
+    y8 = 525;
+    score=score-1;
   }
   if (y9 < 5) {
-   y9 = 525;
-   score=score-1;
+    y9 = 525;
+    score=score-1;
   }
   if (y10 < 5) {
     y10 = 525;
@@ -178,25 +180,25 @@ void mouseClicked () {
 
   //This is to add score if a red bubble is clicked 
   if (mouseY > y3 - 15 && mouseY < y3 + 15 && mouseX > 270 - 15 && mouseX < 270 + 15) {
-   score=score+1;
-   fill(255); 
+    score=score+1;
+    fill(255); 
 
-   y3 = 525;
+    y3 = 525;
   }
   if (mouseY > y5 - 15 && mouseY < y5 + 15 && mouseX > 215 - 15 && mouseX < 215 + 15) {
-   score=score+1;
+    score=score+1;
 
-   y5 = 525;
+    y5 = 525;
   }
   if (mouseY > y8 - 15 && mouseY < y8 + 15 && mouseX > 100 - 15 && mouseX < 100 + 15) {
-   score=score+1;
+    score=score+1;
 
-   y8 = 525;
+    y8 = 525;
   }
   if (mouseY > y9 - 15 && mouseY < y9 + 15 && mouseX > 400 - 15 && mouseX < 400 + 15) {
-   score=score+1;
+    score=score+1;
 
-   y9 = 525;
+    y9 = 525;
   }
 
   //This is to subtract score if a white bubble is clicked 
@@ -234,5 +236,16 @@ void mouseClicked () {
     score=score-1;
 
     y10 = 525;
+  }
+}
+
+void keyPressed() { 
+  if (key == 's') {
+    loop();
+  }
+    if (key == 'r') {
+    loop();
+    setup();
+      loop();
   }
 }
