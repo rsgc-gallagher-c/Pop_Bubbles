@@ -100,11 +100,11 @@ void draw() {
   ellipse(375, y10, 30, 30);
 
   //Make the bubbles move up 
-  y = y -2;
+  y = y -2.7;
   //Make the bubbles move up 
-  y2 = y2 -2;
+  y2 = y2 -2.1;
   //Make the bubbles move up RED
-  y3 = y3 -1;
+  y3 = y3 -1.7;
   //Make the bubbles move up   
   y4 = y4 -2.2;
   //Make the bubbles move up RED
@@ -116,7 +116,7 @@ void draw() {
   //Make the bubbles move up RED
   y8 = y8 -2;
   //Make the bubbles move up RED
-  y9 = y9 -2.1;
+  y9 = y9 -2.5;
   //Make the bubbles move up 
   y10 = y10 -2.1;
 
@@ -140,8 +140,8 @@ void draw() {
     y2 = 525;
   }
   if (y3 < 5) {
-    y3 = 525;
-    score=score-1;
+   y3 = 525;
+   score=score-1;
   }
   if (y4 < 5) {
     y4 = 525;
