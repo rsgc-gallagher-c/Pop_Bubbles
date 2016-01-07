@@ -53,6 +53,7 @@ void setup() {
   //The starting position of the bubbles 
   y10 = 555;
   score = 0;
+  frameRate(60);
 }
 
 void draw() {
@@ -62,9 +63,10 @@ void draw() {
 
   //time counter
   m = m+1;
-  time = time-m/60;
+
+  time = time- m/60; 
   textSize(20);
-  text("Time Left: ", 10, 50); //add end game here when time runs up *********
+  text("Time Left: "+time, 10, 50); //add end game here when time runs up *********
 
   //End Game 
   if (score < -11) {
@@ -171,6 +173,8 @@ void draw() {
   }
 }
 void mouseClicked () {
+
+  //This is to add score if a red bubble is clicked 
   if (mouseY > y3 - 15 && mouseY < y3 + 15 && mouseX > 270 - 15 && mouseX < 270 + 15) {
     score=score+1;
     fill(255); 
@@ -191,5 +195,42 @@ void mouseClicked () {
     score=score+1;
 
     y9 = 525;
+  }
+
+  //This is to subtract score if a white bubble is clicked 
+  if (mouseY > y - 15 && mouseY < y + 15 && mouseX > 200 - 15 && mouseX < 200 + 15) {
+    score=score-1;
+
+    y = 200;
+  }
+
+  if (mouseY > y2 - 15 && mouseY < y2 + 15 && mouseX > 300 - 15 && mouseX < 300 + 15) {
+    score=score-1;
+
+    y = 300;
+  }
+
+  if (mouseY > y4 - 15 && mouseY < y4 + 15 && mouseX > 150 - 15 && mouseX < 150 + 15) {
+    score=score-1;
+
+    y = 150;
+  }
+
+  if (mouseY > y6 - 15 && mouseY < y6 + 15 && mouseX > 130 - 15 && mouseX < 130 + 15) {
+    score=score-1;
+
+    y = 130;
+  }
+
+  if (mouseY > y7 - 15 && mouseY < y7 + 15 && mouseX > 450 - 15 && mouseX < 450 + 15) {
+    score=score-1;
+
+    y = 450;
+  }
+
+  if (mouseY > y10 - 15 && mouseY < y10 + 15 && mouseX > 375 - 15 && mouseX < 375 + 15) {
+    score=score-1;
+
+    y = 375;
   }
 }
