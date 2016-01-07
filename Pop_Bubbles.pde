@@ -86,7 +86,26 @@ void draw() {
   //Make no outline of the circle 
   noStroke();
 
-  //Make the bubbles move up 
+  
+
+
+  //make the bubbles **ALL NON RED ONES** 
+  //Make the bubbles white 
+  fill(255);
+
+  ellipse(200, y, 30, 30);  
+  //make the bubbles 
+  ellipse(300, y2, 30, 30); 
+  //make the bubbles 
+  ellipse(150, y4, 30, 30);
+  //make the bubbles 
+  ellipse(130, y6, 30, 30);
+  //make the bubbles 
+  ellipse(450, y7, 30, 30);
+  //make the bubbles 
+  ellipse(375, y10, 30, 30);
+
+//Make the bubbles move up 
   y = y -2;
   //Make the bubbles move up 
   y2 = y2 -2;
@@ -106,23 +125,6 @@ void draw() {
   y9 = y9 -2.1;
   //Make the bubbles move up 
   y10 = y10 -2.1;
-
-
-  //make the bubbles **ALL NON RED ONES** 
-  //Make the bubbles white 
-  fill(255);
-
-  ellipse(200, y, 30, 30);  
-  //make the bubbles 
-  ellipse(300, y2, 30, 30); 
-  //make the bubbles 
-  ellipse(150, y4, 30, 30);
-  //make the bubbles 
-  ellipse(130, y6, 30, 30);
-  //make the bubbles 
-  ellipse(450, y7, 30, 30);
-  //make the bubbles 
-  ellipse(375, y10, 30, 30);
 
   //Make the other bubbles a drffrent colour **ALL RED ONES** 
   fill(240, 145, 145);
@@ -144,15 +146,15 @@ void draw() {
     y2 = 525;
   }
   if (y3 < 5) {
-    y3 = 525;
-    score=score-1;
+   y3 = 525;
+   score=score-1;
   }
   if (y4 < 5) {
     y4 = 525;
   }
   if (y5 < 5) {
-    y5 = 525;
-    score=score-1;
+   y5 = 525;
+   score=score-1;
   }
   if (y6 < 5) {
     y6 = 525;
@@ -161,12 +163,12 @@ void draw() {
     y7 = 525;
   }
   if (y8 < 5) {
-    y8 = 525;
-    score=score-1;
+   y8 = 525;
+   score=score-1;
   }
   if (y9 < 5) {
-    y9 = 525;
-    score=score-1;
+   y9 = 525;
+   score=score-1;
   }
   if (y10 < 5) {
     y10 = 525;
@@ -176,25 +178,25 @@ void mouseClicked () {
 
   //This is to add score if a red bubble is clicked 
   if (mouseY > y3 - 15 && mouseY < y3 + 15 && mouseX > 270 - 15 && mouseX < 270 + 15) {
-    score=score+1;
-    fill(255); 
+   score=score+1;
+   fill(255); 
 
-    y3 = 525;
+   y3 = 525;
   }
   if (mouseY > y5 - 15 && mouseY < y5 + 15 && mouseX > 215 - 15 && mouseX < 215 + 15) {
-    score=score+1;
+   score=score+1;
 
-    y5 = 525;
+   y5 = 525;
   }
   if (mouseY > y8 - 15 && mouseY < y8 + 15 && mouseX > 100 - 15 && mouseX < 100 + 15) {
-    score=score+1;
+   score=score+1;
 
-    y8 = 525;
+   y8 = 525;
   }
   if (mouseY > y9 - 15 && mouseY < y9 + 15 && mouseX > 400 - 15 && mouseX < 400 + 15) {
-    score=score+1;
+   score=score+1;
 
-    y9 = 525;
+   y9 = 525;
   }
 
   //This is to subtract score if a white bubble is clicked 
@@ -207,30 +209,30 @@ void mouseClicked () {
   if (mouseY > y2 - 15 && mouseY < y2 + 15 && mouseX > 300 - 15 && mouseX < 300 + 15) {
     score=score-1;
 
-    y = 300;
+    y2 = 300;
   }
 
   if (mouseY > y4 - 15 && mouseY < y4 + 15 && mouseX > 150 - 15 && mouseX < 150 + 15) {
     score=score-1;
 
-    y = 150;
+    y4 = 525;
   }
 
   if (mouseY > y6 - 15 && mouseY < y6 + 15 && mouseX > 130 - 15 && mouseX < 130 + 15) {
     score=score-1;
 
-    y = 130;
+    y6 = 525;
   }
 
   if (mouseY > y7 - 15 && mouseY < y7 + 15 && mouseX > 450 - 15 && mouseX < 450 + 15) {
     score=score-1;
 
-    y = 450;
+    y7 = 525;
   }
 
   if (mouseY > y10 - 15 && mouseY < y10 + 15 && mouseX > 375 - 15 && mouseX < 375 + 15) {
     score=score-1;
 
-    y = 375;
+    y10 = 525;
   }
 }
