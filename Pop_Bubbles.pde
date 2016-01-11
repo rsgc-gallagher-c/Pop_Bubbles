@@ -4,8 +4,8 @@
 
 int score; // score
 int mouseClicked; //for seeing if the bubbles are cliked 
-//float time; //the time left to complete the game  +++++++++++++++++++++++++++++++++
-//float m; //the time left to complete the game +++++++++++++++++++++++++++++++++++++
+float time; //the time left to complete the game  
+float m; //the time left to complete the game
 
 
 //The bubbles 
@@ -26,9 +26,9 @@ void setup() {
   //Make the canvas 
   size(500, 500);
 
-////Time to complete the game ++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//time = 45;                                                                       |
-//m = 45; ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  //Time to complete the game 
+  time = 45;                                                                       
+  m = 45; 
 
   //Score counter 
   score = 0;
@@ -63,10 +63,17 @@ void draw() {
   //Make the background black 
   background(0); 
 
-////Time to complete the game +++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//m = m-1;                                                                          |
-//textSize(20);                                                                     |
-//text("Time Left:", 10, 50); +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  //Time to complete the game 
+  time = time-0.016;                                                                      
+  textSize(20);                                                                     
+  text("Time Left: " + time, 10, 50); 
+
+  //End game if time left is 0
+  if (time < 1) {
+    textSize (50);
+    text ("End Game", 10, 100);
+    noLoop();
+  }
 
   //End Game if score is -12 
   if (score < -11) {
@@ -149,8 +156,8 @@ void draw() {
     y2 = 525;
   }
   if (y3 < 5) {
-   y3 = 525;
-   score=score-1;
+    y3 = 525;
+    score=score-1;
   }
   if (y4 < 5) {
     y4 = 525;
