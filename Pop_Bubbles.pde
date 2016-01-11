@@ -5,8 +5,6 @@
 int score; // score
 int mouseClicked; //for seeing if the bubbles are cliked 
 float time; //the time left to complete the game  
-float m; //the time left to complete the game
-
 
 //The bubbles 
 float y; //the Y positon on the bubbles 
@@ -27,8 +25,7 @@ void setup() {
   size(500, 500);
 
   //Time to complete the game 
-  time = 45;                                                                       
-  m = 45; 
+  time = 30;                                                                       
 
   //Score counter 
   score = 0;
