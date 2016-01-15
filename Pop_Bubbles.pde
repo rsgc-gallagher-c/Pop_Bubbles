@@ -1,12 +1,12 @@
 //Carlyle Gallagher
 
-//To count the score 
+//Global Variables used throughtout the program 
 
 int score; // score
 int mouseClicked; //for seeing if the bubbles are cliked 
 float time; //the time left to complete the game  
 
-//The bubbles 
+//Make the bubbles 
 float B; //the Y positon on the bubbles 
 float B2; //the Y positon on the bubbles 
 float B3; //the Y positon on the bubbles RED
@@ -50,8 +50,14 @@ void setup() {
   B9 = 530;
   //The starting position of the bubbles 
   B10 = 555;
+
+  //Make the score start at 0 
   score = 0;
+
+  //Slow the game framerate down 
   frameRate(60);
+
+  //Make this part of the game (Setup) only run once 
   noLoop();
 }
 
@@ -61,6 +67,8 @@ void draw() {
   background(0); 
 
   //Time to complete the game 
+
+  //Make time count down 
   time = time-0.016;                                                                      
   textSize(20);                                                                     
   text("Time Left: " + time, 10, 50); 
@@ -80,7 +88,7 @@ void draw() {
     noLoop();
   }
 
-  ////End game if score is +12
+  //End game if score is +12
   if (score > +11) {
 
     textSize (50);
@@ -88,18 +96,17 @@ void draw() {
     noLoop() ;
   }
 
-
+  //Make the score apear on the screen 
   textSize(20);
   text("Score: "+ score, 10, 30);
 
   //Make no outline of the circle 
   noStroke();
 
-
-  //make the bubbles **ALL NON RED ONES** 
-  //Make the bubbles white 
+  //Make the colour white 
   fill(255);
 
+  //Make the bubbles **ALL NON RED ONES** 
   ellipse(200, B, 30, 30);  
   //make the bubbles 
   ellipse(300, B2, 30, 30); 
@@ -133,10 +140,10 @@ void draw() {
   //Make the bubbles move up 
   B10 = B10 -2.1;
 
-  //Make the other bubbles a drffrent colour **ALL RED ONES** 
+  //Make the colour red 
   fill(240, 145, 145);
 
-  //make the bubbles RED
+  //Make the bubbles **ALL RED ONES**
   ellipse(270, B3, 30, 30); 
   //make the bubbles RED
   ellipse(215, B5, 30, 30);
@@ -152,15 +159,19 @@ void draw() {
   if (B2 < 10) {
     B2 = 525;
   }
+  //Red Bubble
   if (B3 < 5) {
     B3 = 525;
+    //Make the score go down one if the bubble goes off the screen 
     score=score-1;
   }
   if (B4 < 5) {
     B4 = 525;
   }
+  //Red Bubble
   if (B5 < 5) {
     B5 = 525;
+    //Make the score go down one if the bubble goes off the screen 
     score=score-1;
   }
   if (B6 < 5) {
@@ -169,12 +180,16 @@ void draw() {
   if (B7 < 5) {
     B7 = 525;
   }
+  //Red Bubble
   if (B8 < 5) {
     B8 = 525;
+    //Make the score go down one if the bubble goes off the screen 
     score=score-1;
   }
+  //Red Bubble
   if (B9 < 5) {
     B9 = 525;
+    //Make the score go down one if the bubble goes off the screen 
     score=score-1;
   }
   if (B10 < 5) {
@@ -183,63 +198,63 @@ void draw() {
 }
 void mouseClicked () {
 
-  //This is to add score if a red bubble is clicked 
+  //Add score if a red bubble is clicked 
   if (mouseY > B3 - 15 && mouseY < B3 + 15 && mouseX > 270 - 15 && mouseX < 270 + 15) {
     score=score+1;
     fill(255); 
-
+    //Reset the bubble down to the bottom when clicked 
     B3 = 525;
   }
   if (mouseY > B5 - 15 && mouseY < B5 + 15 && mouseX > 215 - 15 && mouseX < 215 + 15) {
     score=score+1;
-
+    //Reset the bubble down to the bottom when clicked 
     B5 = 525;
   }
   if (mouseY > B8 - 15 && mouseY < B8 + 15 && mouseX > 100 - 15 && mouseX < 100 + 15) {
     score=score+1;
-
+    //Reset the bubble down to the bottom when clicked 
     B8 = 525;
   }
   if (mouseY > B9 - 15 && mouseY < B9 + 15 && mouseX > 400 - 15 && mouseX < 400 + 15) {
     score=score+1;
-
+    //Reset the bubble down to the bottom when clicked 
     B9 = 525;
   }
 
   //This is to subtract score if a white bubble is clicked 
   if (mouseY > B - 15 && mouseY < B + 15 && mouseX > 200 - 15 && mouseX < 200 + 15) {
     score=score-1;
-
+    //Reset the bubble down to the bottom when clicked 
     B = 200;
   }
 
   if (mouseY > B2 - 15 && mouseY < B2 + 15 && mouseX > 300 - 15 && mouseX < 300 + 15) {
     score=score-1;
-
+    //Reset the bubble down to the bottom when clicked 
     B2 = 300;
   }
 
   if (mouseY > B4 - 15 && mouseY < B4 + 15 && mouseX > 150 - 15 && mouseX < 150 + 15) {
     score=score-1;
-
+    //Reset the bubble down to the bottom when clicked 
     B4 = 525;
   }
 
   if (mouseY > B6 - 15 && mouseY < B6 + 15 && mouseX > 130 - 15 && mouseX < 130 + 15) {
     score=score-1;
-
+    //Reset the bubble down to the bottom when clicked 
     B6 = 525;
   }
 
   if (mouseY > B7 - 15 && mouseY < B7 + 15 && mouseX > 450 - 15 && mouseX < 450 + 15) {
     score=score-1;
-
+    //Reset the bubble down to the bottom when clicked 
     B7 = 525;
   }
 
   if (mouseY > B10 - 15 && mouseY < B10 + 15 && mouseX > 375 - 15 && mouseX < 375 + 15) {
     score=score-1;
-
+    //Reset the bubble down to the bottom when clicked 
     B10 = 525;
   }
 }
@@ -252,6 +267,7 @@ void keyPressed() {
   //Press R to restart game 
   if (key == 'r') {
     loop();
+    //Make the program re-run setup when 'r' is clicked to re-set the score to 0 etc. 
     setup();
     loop();
   }
