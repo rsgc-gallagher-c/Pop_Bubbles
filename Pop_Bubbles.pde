@@ -12,6 +12,9 @@ float time; //the time left to complete the game
 
 //Make the bubbles 
 float B; //the Y positon on the bubbles 
+
+float BX; //the X posotion on the bubbles *********************
+
 float B2; //the Y positon on the bubbles 
 float B3; //the Y positon on the bubbles RED
 float B4; //the y position of the bubbles 
@@ -42,6 +45,10 @@ void setup() {
 
   //The starting position of the bubbles 
   B = 530;
+
+
+  BX = 75; //Starting X position of the bubble ***********************
+
 
   //The starting position of the bubbles 
   B2 = 560;
@@ -134,7 +141,7 @@ void draw() {
 
   //Make the bubbles **ALL NON RED ONES** 
 
-  ellipse(200, B, 30, 30); 
+  ellipse(BX, B, 30, 30); //******************************
 
   //make the bubbles 
   ellipse(300, B2, 30, 30); 
@@ -154,6 +161,10 @@ void draw() {
 
   //Make the bubbles move up 
   B = B -2.7;
+
+
+  BX = BX - 0.5; //Make the bubble move sideways ********************
+
 
   //Make the bubbles move up 
   B2 = B2 -2.1;
@@ -200,14 +211,28 @@ void draw() {
   ellipse(400, B9, 30, 30);
 
 
+  //Make the bubble move the other way when it hits the side ***************
+
+  //Make it move right 
+  if (BX > 470) {
+    BX = BX -2;
+  }
+
+  //Make it move back left 
+  if (BX < 30) {
+    BX = BX +2;
+  }
+
+
+
   //Reset the bubbles back to the bottom of the screen and -1 score if a red bubble goes off the screen 
-  
+
   //White bubble 
   if (B < 7) {
     B = 525;
   }
 
- //White bubble 
+  //White bubble 
   if (B2 < 10) {
     B2 = 525;
   }
@@ -219,30 +244,30 @@ void draw() {
   }
 
 
- //White bubble 
+  //White bubble 
   if (B4 < 5) {
     B4 = 525;
   }
-  
+
 
   //Make the score go down one if the bubble goes off the screen **RED BUBBLE**
   if (B5 < 5) {
     B5 = 525;
     score=score-1;
   }
-  
 
- //White bubble 
+
+  //White bubble 
   if (B6 < 5) {
     B6 = 525;
   }
-  
 
- //White bubble 
+
+  //White bubble 
   if (B7 < 5) {
     B7 = 525;
   }
-  
+
 
   //Make the score go down one if the bubble goes off the screen **RED BUBBLE**
   if (B8 < 5) {
@@ -256,55 +281,54 @@ void draw() {
     B9 = 525;
     score=score-1;
   }
-  
 
- //White bubble 
+
+  //White bubble 
   if (B10 < 5) {
     B10 = 525;
   }
-  
 }
 
 
 void mouseClicked () {
 
-  
+
   //ADD SCORE IF A RED BUBBLE IS CLICKED 
-  
-  
+
+
   if (mouseY > B3 - 15 && mouseY < B3 + 15 && mouseX > 270 - 15 && mouseX < 270 + 15) {
     score=score+1;
     fill(255); 
     //Reset the bubble down to the bottom when clicked 
     B3 = 525;
   }
-  
-  
+
+
   if (mouseY > B5 - 15 && mouseY < B5 + 15 && mouseX > 215 - 15 && mouseX < 215 + 15) {
     score=score+1;
     //Reset the bubble down to the bottom when clicked 
     B5 = 525;
   }
-  
-  
+
+
   if (mouseY > B8 - 15 && mouseY < B8 + 15 && mouseX > 100 - 15 && mouseX < 100 + 15) {
     score=score+1;
     //Reset the bubble down to the bottom when clicked 
     B8 = 525;
   }
-  
-  
+
+
   if (mouseY > B9 - 15 && mouseY < B9 + 15 && mouseX > 400 - 15 && mouseX < 400 + 15) {
     score=score+1;
     //Reset the bubble down to the bottom when clicked 
     B9 = 525;
   }
-  
-  
+
+
 
   //SUBTRACT SCORE IF A WHITE BUBBLE IS CLICKED
-  
-  
+
+
   if (mouseY > B - 15 && mouseY < B + 15 && mouseX > 200 - 15 && mouseX < 200 + 15) {
     score=score-1;
     //Reset the bubble down to the bottom when clicked 
@@ -354,8 +378,8 @@ void keyPressed() {
   if (key == 's') {
     loop();
   }
-  
-  
+
+
   //Press R to restart game 
   if (key == 'r') {
     loop();
